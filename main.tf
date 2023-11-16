@@ -98,8 +98,8 @@ resource "aws_db_instance" "example_db_instance" {
   engine               = "mysql"
   allocated_storage    = 20
   instance_class       = "db.t3.micro"
-  username             = "----" # give your username
-  password             = "----" # give your password
+  username             = "----" # "give your username"
+  password             = "----" # "give your password"
   db_subnet_group_name = aws_db_subnet_group.example_db_subnet_group.name
 
   tags = {
