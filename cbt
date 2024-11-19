@@ -1,0 +1,14 @@
+steps:
+  - script: |
+      # Add Google Cloud SDK to PATH
+      source /home/vsts/google-cloud-sdk/path.bash.inc
+
+      # Authenticate using the service account
+      gcloud auth activate-service-account --key-file=/path/to/your-key.json
+
+      # Install the CBT component
+      gcloud components install cbt --quiet
+
+      # Run CBT commands (example)
+      cbt listinstances
+    displayName: "Install CBT and Execute Commands"
