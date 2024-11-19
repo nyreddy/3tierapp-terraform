@@ -1,5 +1,9 @@
 steps:
   - script: |
+      # Step 0: Remove Older Google Cloud SDK Installation (if any)
+      echo "Removing any existing Google Cloud SDK installations..."
+      rm -rf $HOME/google-cloud-sdk
+
       # Step 1: Install Google Cloud SDK with Component Manager Enabled
       echo "Installing Google Cloud SDK..."
       curl https://sdk.cloud.google.com | bash
